@@ -79,7 +79,7 @@ resource "aws_security_group" "my-sg" {
        associate_public_ip_address = true
        key_name = "jk2"
          
-       user_data = <<EOF
+       user_data = <<-EOF
                      #!/bin/bash
                      sudo yum update -y && sudo yum install docker -y
                      sudo systemctl start docker
